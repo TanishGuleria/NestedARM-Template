@@ -20,3 +20,8 @@ $url = (Get-AzureStorageBlob -Container test -Blob Demo1ParentTemplate.json).ICl
 New-AzureRmResourceGroup -Location CentralUS -Name armdemo3
 
 New-AzureRmResourceGroupDeployment -ResourceGroupName armdemo3 -TemplateFile $url
+
+
+# Complete Deployment  
+
+New-AzureRmResourceGroupDeployment -Mode Complete -Name ExampleDeployment -ResourceGroupName "enter your resouce group name " -TemplateFile c:\MyTemplates\Demo2CompletevsIncremental.json.json 
